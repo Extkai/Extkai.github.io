@@ -1,0 +1,73 @@
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+.imglist{
+	max-width: 1200px;
+	margin:0 auto ;	
+}
+.imglist *{
+	box-sizing: border-box;
+}
+img{
+	width: 100%;
+	transition: all .8s;
+}
+img:hover{
+	transform: scale(1.2) rotate(6deg);
+}
+.imglist figure{
+	
+	position: relative;
+	float: left;
+	width: 30%;
+	margin: calc(10%/6);
+	overflow: hidden;
+	border: 10px solid #fff;
+	box-shadow: 0 0 5px 0 rgba(0,0,0,.5);		
+}
+.clearfix figure figcaption{
+	color: aliceblue;
+	border: 2px solid #fff;
+	position: absolute;
+	z-index: 2;
+	/*width: 30px;*/
+	top: 30%;
+	left: 20%;
+	right: 20%;	
+	bottom: 38%;
+	margin:auto;
+	border-bottom: none;		
+}
+.imglist figure figcaption::after,
+.imglist figure figcaption::before{
+	content: "";
+	width: 50%;
+	height: 1px;
+	background-color:#fff ;
+	bottom: 0;
+	position: absolute;
+	transition: all .8s;
+}
+.imglist figure figcaption::after{
+	right: 0;	
+}
+.imglist figure:hover figcaption::after,
+.imglist figure:hover figcaption::before{
+	width:20%;	
+}
+.clearfix figure figcaption h3{
+	text-align: center;	
+	font-size: 1.4em;	
+}
+.clearfix figure figcaption p{
+	text-align: center;
+	position: relative;
+	opacity: 0;
+}
+.clearfix figure:hover figcaption p{	
+	opacity: 1;
+	transition: all .8s;
+}
+
