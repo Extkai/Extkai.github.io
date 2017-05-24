@@ -149,8 +149,14 @@ margin: 50px 0 0 0;
 	margin: 10px 20px 20px 0;
 	border-radius: 5px;
 }
-section textarea,
-section input[type="submit"]{	
+.lianxi textarea{
+	width: 48%;
 	border: none;
-	vertical-align: top;	
+	outline: none;
+}
+.lianxi input[type="submit"]{
+	width: 48%;
+	height: 50px;
+	margin: 0 0 0 1%;
+	vertical-align: top;
 }
