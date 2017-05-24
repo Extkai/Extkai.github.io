@@ -11,8 +11,7 @@ ul{
 }
 body{
 	background: url(../img/robson-hatsukami-morgan-222274.jpg)no-repeat fixed;
-	background-size: cover;
-	
+	background-size: cover;	
 	min-height: 1200px;	
 }
 .we{
@@ -117,4 +116,41 @@ p a:hover{
 }
 .work figure:hover img{
     -webkit-filter: grayscale(0);
+}
+section h2{
+margin: 50px 0 0 0;
+}
+.lianxi dl dt{
+	width: 80px;
+	height: 40px;
+	color: #000;
+	text-align: center;
+	line-height: 40px;
+	background: #fff;
+	display: inline-block;
+}
+.lianxi dl dd{
+	width: 200px;
+	height: 40px;
+	line-height: 40px;
+	margin: 0 10px 10px 0;
+	color: #fff;
+	outline: none;
+	background: #000;
+	text-align: center;
+	display: inline-block;
+}
+.lianxi input,
+.lianxi select{
+	width: 30%;
+	height: 40px;
+	border: none;
+	outline: none;	
+	margin: 10px 20px 20px 0;
+	border-radius: 5px;
+}
+section textarea,
+section input[type="submit"]{	
+	border: none;
+	vertical-align: top;	
 }
