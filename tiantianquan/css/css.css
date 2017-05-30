@@ -1,0 +1,60 @@
+/*整体开始 */
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;	
+}
+a{
+	text-decoration: none;
+}
+ul{
+   list-style: none;
+   padding: 0px;
+}
+.container{
+	max-width: 1200px;
+	margin: auto;
+}
+/*整体结束******/
+/*头部菜单开始 */
+header{
+	position: fixed;
+	padding: 20px 0px;
+	width: 100%;
+	background-color: rgba(0,0,0,0.1);		
+}
+.logo img{
+	width: 60px;
+	height: 60px;
+}
+header .logo{	
+	float: left;
+}
+header .logo span{
+	font-size:3.5em;
+	font-family: 'Dancing Script', cursive;
+}
+header .logo img,
+header .logo span{
+	vertical-align: middle;
+}
+header a{
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+}
+header .topmenu{	
+	float: right;
+	margin-top: 5px;	
+}
+header .topmenu ul li{
+	float: left;
+	margin: 0px 30px;
+}
+header a{
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+}
+header a:hover{
+	color: #339BEB;
+}
+/*头部菜单结束 */
