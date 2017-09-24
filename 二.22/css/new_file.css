@@ -1,0 +1,13 @@
+* {
+	padding: 20px;
+	margin: 0;
+}
+#colorTable {
+	border-collapse: collapse;
+	border: 1px solid rgba(0, 0, 0, .2);
+	width: 100%;
+}
+#colorTable td {
+	border: 1px solid rgba(0, 0, 0, .2);
+	height: 30px;
+}
