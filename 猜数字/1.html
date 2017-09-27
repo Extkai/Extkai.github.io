@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>猜数字</title>
+		<style type="text/css">
+			
+			.d1{
+				width: 210px;
+				margin: 200px auto 80px auto;
+				position: relative;
+				text-align: center;
+			}
+			.d1 input{
+				height: 30px;			
+				position: absolute;
+			}
+			.d1 #num{
+				height: 26px;
+				width: 150px;
+				padding-left: 10px;
+				border: 1px solid black;
+				border-radius: 15px 0 0 15px;
+				left: 0;
+			}
+			.d1 #but,.d1 #but1{
+				width: 50px;
+				left: 161px;
+				border-radius: 0 15px 15px 0;
+			}
+			.d1 #but{
+				display: block;
+			}
+			.d1 #but1{
+				display: none;
+			}
+			.d{
+				width: 210px;
+				height: 200px;
+				margin: auto;			
+			}
+			
+
+		</style>
+	</head>
+	<body>
+		
+			<div class="d1">
+				<h2>猜数字游戏</h2>
+				<input type="number" min="0" name="num" id="num"  placeholder="请输入0-10的整数" />
+				<input type="button" name="but" id="but" value="提交" />
+				<input type="button" name="but1" id="but1" value="重来" />
+			</div>
+			<div class="d">			
+					剩余次数：<span id="yushu">6</span><br />				
+				<div class="d3">
+					历史记录：<br />
+					<p id="lishi"></p>
+				</div>
+			</div>
+
+		<script type="text/javascript">
+			var oNum=document.getElementById('num');
+			var oBut=document.getElementById('but');
+			var oBut1=document.getElementById('but1');			
+			var oYushu=document.getElementById('yushu');
+			var oLishi=document.getElementById('lishi');
+			var max=10;
+			var cishu=6;
+			var shuruzhi;
+			var shuijizhi=parseInt(Math.random()*max);
+			
+			oBut.addEventListener("click",yunxing);
+			function yunxing(){
+				shuruzhi=parseInt(oNum.value);
+				oYushu.innerHTML=cishu-1;
+					if(isNaN(shuruzhi))
+						oLishi.innerHTML+="这次输入的数"+shuruzhi+"不是数字！<br />";
+					else if(cishu>0){
+						if(shuruzhi>shuijizhi)
+							oLishi.innerHTML+="这次输入的数"+shuruzhi+"偏大！<br />";
+						else if(shuruzhi<shuijizhi)
+							oLishi.innerHTML+="这次输入的数"+shuruzhi+"偏小！<br />";
+						else{
+							oLishi.innerHTML+="这次输入的数"+shuruzhi+"对了！<br />";
+							bianhua();
+						}
+							
+					}
+					if(cishu<=1){
+					bianhua();					
+					oNum.focus();
+					}	
+					cishu--;
+			}
+			function bianhua(){
+				oNum.disabled=true;
+				oNum.style.borderColor="red";
+				oBut.style.display="none";
+				oBut1.style.display="block";
+			}
+			oBut1.addEventListener("click",chonglai);
+			function  chonglai () {
+				oNum.disabled=false;
+				oBut.style.display="block";
+				oBut1.style.display="none";				
+				cishu=6;	
+				oNum.style.borderColor="black";
+				shuijizhi=parseInt(Math.random()*max);
+				oNum.value="";
+				oYushu.innerHTML=cishu;
+				oLishi.innerHTML="";
+				oNum.focus();
+			}
+		</script>
+	</body>
+</html>
