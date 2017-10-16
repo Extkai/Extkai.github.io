@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			body{
+				background-color: #ADD8E6;
+			}
+			#zxc{
+				width:680px;
+				margin: auto;
+			}
+			.a{
+				font-size: 3em;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="zxc">
+			<p class="a"></p>
+			<p class="a"></p>
+		</div>
+		
+		<script type="text/javascript">
+			var n="中,华,人,民,共,和,国,万,岁";
+			var x="中,国,万,岁,"			
+			var m=n.split(",");
+			var y=x.split(",")
+			var i=0;
+			var j=0;
+			var a=document.getElementsByClassName("a");
+			var set=setInterval(fang,250);
+			function fang () {
+				if(i<m.length){
+					a[0].innerText+=m[i]+"";
+					i=i+1;
+				}
+				if(i==m.length&&j<y.length){
+					i=m.length;
+					a[1].innerText+=y[j]+"";
+					j=j+1;
+				}
+				if(i==m.length&&j==y.length){
+					a[0].innerText="";
+					a[1].innerText="";
+					i=0;
+					j=0;
+				}
+			}
+		</script>
+	</body>
+</html>
