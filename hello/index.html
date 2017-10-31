@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			#text{
+				margin: 200px;
+				width: 360px;
+				position: absolute;							
+				overflow: hidden;
+			}
+			
+			#text img{			
+			width: 100%;
+				}
+			#text #son{
+				width: 60px;
+				height: 60px;				
+				position: absolute;
+				pointer-events: none;
+				border-radius: 100%;
+				left: 0;
+				top: 0;
+				opacity: 0;				
+				transform: translate(-50%,-50%) scale(1);
+				background: url(img/timg.jpg);
+				transition: opacity .5s ,transform .5s;				
+			}
+			#text:hover #son{
+				transform: translate(-50%,-50%)scale(2);
+				opacity: 1;				
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="text">
+		<img src="img/timg.jpg" />
+			<div id="son">
+			</div>
+		</div>
+		<script type="text/javascript">
+		    var oSon=document.getElementById("son");
+			var oText=document.getElementById("text");
+			var oImg=oText.querySelector('img');
+			var ratio;
+			oImg.addEventListener('load',function(){
+				ratio=oImg.naturalWidth/oImg.width;
+			});
+			oText.addEventListener("mousemove",function(){
+				var x=event.offsetX;
+				var y=event.offsetY;
+				oSon.style.left=x+"px";
+				oSon.style.top=y+"px";
+				oSon.style.backgroundPosition=(-x*ratio+30)+"px "+(-y*ratio+30)+"px"
+			})
+		</script>
+	</body>
+</html>
