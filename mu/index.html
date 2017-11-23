@@ -1,10 +1,49 @@
+
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title></title>
-	</head>
-	<body>
-		
-	</body>
+		<title>mune</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>菜单</title>
+<style type="text/css">
+*{margin:0;
+ padding:0;
+ }
+#nav{width:200px; margin:50px}
+#nav h3{ cursor:pointer; line-height:30px; height:30px; background-color:deepskyblue; color:white}
+#nav a{display:block; line-height:24px;color:#666666}
+#nav a:hover{background-color:#eee; color:#000;}
+#nav div{display:none; border:1px solid #000; border-top:none}
+</style>
+<script type="text/javascript">
+function $(id){return document.getElementById(id)}
+window.onload = function(){
+ $("nav").onclick = function(e){
+  var src = e?e.target:event.srcElement;
+  if(src.tagName == "H3"){
+   var next = src.nextElementSibling || src.nextSibling;
+   next.style.display = (next.style.display =="block")?"none":"block";
+  }
+ }
+}
+</script>
+</head>
+
+<body>
+<div id="nav">
+ <h3>menu1</h3>
+    <div>
+     <a href="http://sc.chinaz.com/jiaoben/caidanhaohang.html">js菜单</a>
+        <a href="http://hz.web.tedu.cn/baidu/html/?hzlth2017100203272=html-20171003=%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1%2Bhtml&b_scene_zt=1">网页制作</a>
+        <a href="">动画制作</a>
+    </div>
+    <h3>menu2</h3>
+    <div>
+     <a href="">管理</a>
+        <a href="">项目</a>
+        <a href="">具体信息</a>
+    </div>
+</div>
+</body>
 </html>
