@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    >
+
+
+    <EditText
+        android:background="@null"
+        android:layout_marginTop="400dp"
+        android:textColor="#4664c0"
+
+        android:text="           曾经沧海难为水，除却巫山不是云！"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/bt"
+        android:layout_width="match_parent"
+        android:text="返回计算器"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\ydkf051\Desktop\Calculator1\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="52adb338efed0b894572650abcbfc1f4a118a997">
+        <dex dex="C:\Users\ydkf051\Desktop\Calculator1\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_8cf8302de2ae2db7783123f7b40bab5b1b9a5be8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ydkf051\Desktop\Calculator1\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="7dbd9632e80571cf4a192bcf3ba0fd85b6c055e0">
+        <dex dex="C:\Users\ydkf051\Desktop\Calculator1\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_50ef37b00acad54b3f70947a1db2f0569cca7731\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android\sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
+        <dex dex="C:\Users\ydkf051\Desktop\Calculator1\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-v4-19.1.0_7541db917baa506c0dd564574dda219c7099e134\classes.dex" />
+    </item>
+
+</items>
